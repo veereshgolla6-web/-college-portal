@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ECE II Year Academic Portal | Ashoka Women's Engineering College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><div class="logo">AW</div><div><h1>ASHOKA WOMEN'S ENGINEERING COLLEGE</h1><p>ECE II YEAR ACADEMIC PORTAL</p></div></div><button class="menu" onclick="toggleNav()">☰</button></header>
+<div class="layout">
+<aside id="sidebar"><div class="side-title">ECE II YEAR</div>
+<button class="nav active" onclick="showPage('home',this)">⌂ Dashboard</button><button class="nav" onclick="showPage('students',this)">👩‍🎓 Students</button><button class="nav" onclick="showPage('subjects',this)">📚 Subjects</button><button class="nav" onclick="showPage('timetable',this)">🗓 Timetable</button><button class="nav" onclick="showPage('faculty',this)">👩‍🏫 Faculty</button>
+<div class="side-note">Current scope<br><b>ECE • II Year</b><br>Sections A, B & C</div></aside>
+<main>
+<section id="home" class="page"><div class="hero"><div><span class="pill">Academic Portal</span><h2>ECE II Year</h2><p>Manage and view academic information for ECE II Year students and sections.</p></div><div class="hero-badge">2026–27</div></div>
+<div class="cards"><div class="card"><span>👩‍🎓</span><b>Students</b><strong>A–C</strong><small>Sections A, B & C</small></div><div class="card"><span>📚</span><b>Subjects</b><strong>7</strong><small>Academic subjects</small></div><div class="card"><span>🗓</span><b>Sections</b><strong>3</strong><small>A, B, C</small></div><div class="card"><span>📅</span><b>Working Days</b><strong>6</strong><small>Monday–Saturday</small></div></div>
+<div class="panel"><h3>Portal Modules</h3><div class="modules"><button onclick="showPage('students')">Student Information →</button><button onclick="showPage('timetable')">Day-wise Timetable →</button><button onclick="showPage('subjects')">Subject Information →</button><button onclick="showPage('faculty')">Faculty Information →</button></div></div></section>
+<section id="students" class="page hidden"><div class="page-head"><div><span class="pill">ECE • II Year</span><h2>Students</h2><p>Student master will be organized section-wise.</p></div><select id="studentSection" onchange="renderStudents()"><option>A</option><option>B</option><option>C</option></select></div><div id="studentTable" class="panel"></div></section>
+<section id="subjects" class="page hidden"><div class="page-head"><div><span class="pill">Academic</span><h2>Subjects</h2><p>Subjects used in the ECE II Year timetable.</p></div></div><div class="subject-grid" id="subjectGrid"></div></section>
+<section id="timetable" class="page hidden"><div class="page-head"><div><span class="pill">Weekly Schedule</span><h2>Timetable</h2><p>ECE II Year timetable for Sections A, B and C.</p></div><select id="ttSection" onchange="renderTimetable()"><option>A</option><option>B</option><option>C</option></select></div><div class="panel table-wrap" id="ttTable"></div></section>
+<section id="faculty" class="page hidden"><div class="page-head"><div><span class="pill">Academic Staff</span><h2>Faculty</h2><p>Faculty master will be connected after the faculty data is added.</p></div></div><div class="empty">Faculty details will be connected here after the faculty master data is added.</div></section>
+</main></div><script src="app.js"></script></body></html>
